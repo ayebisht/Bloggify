@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <!--------- Awesome Fonts ------------>
+    <script src="https://kit.fontawesome.com/8f8794589b.js" crossorigin="anonymous"></script>
+
+    <!--------- Custom Style ------------->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!----------------------- Navigation Start ---------------------------->
+
+    <nav class="lnav">
+        <div class="nav-menu flex">
+            <div class="nav-brand">
+                <a href="/register" class="text-grey">Bloggify</a>
+            </div>
+
+            <!-- social link Start -->
+
+            <div class="social text-grey">
+                <a href="https://www.facebook.com/125blake"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/aye.mr.bisht/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/GaneshB09878823"><i class="fa-brands fa-twitter"></i></a>
+                <a href="/register"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <!-- Social link End -->
+
+        </div>
+    </nav>
+
+    <!-------x-------x-------- Navigation End ------x----------x----------->
+
+    <!----------------------- Blog Container Start --------------------->
+
+    <section>
+        <div class="blog-container">
+
+            <!-- box 1 -->
+
+            <div class="blog-box">
+
+                <!-- img -->
+
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1521321205814-9d673c65c167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+                        alt="image">
+                </div>
+
+                <!-- text -->
+
+                <div class="blog-text">
+                    <span>25 Apr 2022 /Missions</span>
+                    <a href="/about" class="blog-title">Our Missions</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugiat dicta quasi error dolore
+                        voluptate sed odit beatae minus maiores mollitia impedit distinctio, dignissimos doloremque
+                        quamsunt laboriosam? Inventore, temporibus.</p>
+                    <a href="/about">Read More</a>
+                </div>
+            </div>
+
+            <!-- box 2 -->
+
+            <div class="blog-box">
+
+                <!-- img -->
+
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1614036417651-efe5912149d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=919&q=80"
+                        alt="image">
+                </div>
+
+                <!-- text -->
+
+                <div class="blog-text">
+                    <span>25 Apr 2022 /Achievements</span>
+                    <a href="/about" class="blog-title">Our Accomplishment...</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab fugiat dicta quasi error dolore
+                        voluptate sed odit beatae minus maiores mollitia impedit distinctio, dignissimos doloremque
+                        quamsunt laboriosam? Inventore, temporibus.</p>
+                    <a href="/about">Read More</a>
+                </div>
+            </div>
+
+            <!----------------------- Register Container Start --------------------->
+
+            <section>
+                <div class="blogr-container">
+
+                    <!-- box 1 -->
+
+                    <div class="blogr-box">
+
+                        <!-- Register page -->
+
+                        <section class="blogr">
+                            <div class="blogr-heading">
+                                <h3>Registration</h3>
+                            </div>
+                        </section>
+
+                        <!-- text -->
+
+                        <div class="center">
+                            <form action="/savelink" method="post">
+                                <div class="txt_field">
+                                    <input type="text" name="name" required>
+                                    <span></span>
+                                    <label>Full Name</label>
+                                </div>
+                                <div class="txt_field">
+                                    <input type="text" name="username" required>
+                                    <span></span>
+                                    <label>Username</label>
+                                </div>
+                                <div class="txt_field">
+                                    <input type="password" name="password" required>
+                                    <span></span>
+                                    <label>Password</label>
+                                </div>
+                                <input type="submit" value="Register" id="register"><br><br>
+                                <span>By signing up, you agree to our Terms and Cookies Policy
+                                    .</span><br><br>
+                                <span>Have an account?<br><br><a href="/login">Login</a></span><br><br>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!------------------------- Register Container End -------------------------------->
+
+        </div>
+    </section>
+
+    <!------------------------- Blog Container End -------------------------------->
+
+</body>
+
+</html>

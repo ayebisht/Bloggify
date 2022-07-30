@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+
+    <!--------- Awesome Fonts ------------>
+    <script src="https://kit.fontawesome.com/8f8794589b.js" crossorigin="anonymous"></script>
+
+    <!--------- Custom Style ------------->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!----------------------- Navigation Start ---------------------------->
+
+    <nav class="nav">
+        <div class="nav-menu flex">
+            <div class="nav-brand">
+                <a href="/home" class="text-grey">Bloggify</a>
+            </div>
+
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="/home">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/category">Category</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/about">About</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/contactus">ContactUs</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="social text-grey">
+                <a href="https://www.facebook.com/125blake"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/aye.mr.bisht/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/GaneshB09878823"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-------x-------x-------- Navigation End ------x----------x----------->
+
+    <!----------------------- Create Container Start --------------------->
+
+    <section>
+        <div class="blogc-container">
+
+            <!-- box 1 -->
+
+            <div class="blogc-box">
+
+                <!-- Login page -->
+
+                <section class="blogc">
+                    <div class="blogc-heading">
+                        <h3>Create Blog</h3>
+                    </div>
+                </section>
+
+                <!-- text -->
+
+                <section>
+                    <form action="/savecreate" method="post">
+                        <div class="blogc-text">
+
+                            <label for="title">Title</label>
+                            <input type="text" name="title" placeholder="Blog Title" required></input><br>
+                            <label for="content">Content</label>
+                            <textarea name="content" placeholder="Write your content here..." cols="30" rows="5"
+                                required></textarea><br>
+                            <input type="submit" value="Submit" id="create"><br>
+
+                            <!-- back button start -->
+
+                            <section class="blogh">
+                                <div class="blogh-heading">
+                                    <a href="/blog">Back</a>
+                                </div>
+                            </section>
+
+                            <!-- back button end -->
+
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!------------------------- Create Container End -------------------------------->

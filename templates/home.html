@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--------- Awesome Fonts ------------>
+    <script src="https://kit.fontawesome.com/8f8794589b.js" crossorigin="anonymous"></script>
+
+    <!--------- Custom Style ------------->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!----------------------- Navigation Start ---------------------------->
+
+    <nav class="nav">
+        <div class="nav-menu flex">
+            <div class="nav-brand">
+                <a href="/home" class="text-grey">Bloggify</a>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="/home">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/category">Category</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/about">About</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/contactus">ContactUs</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-grey">
+                <a href="https://www.facebook.com/125blake"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/aye.mr.bisht/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/GaneshB09878823"><i class="fa-brands fa-twitter"></i></a>
+                <a href="/home"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-------x-------x-------- Navigation End ------x----------x----------->
+
+    <!------------------------- Blog Start -------------------------------->
+
+    <section class="blog">
+        <div class="blog-heading">
+            <h3>Welcome, to Bloggify</h3>
+            <span>Recent Post</span>
+        </div>
+    </section>
+
+    <!------------------------- Blog End -------------------------------->
+
+    <!----------------------- Home Container Start --------------------->
+
+    <section>
+        <div class="blog-container">
+
+            <!-- box 1 -->
+
+            <div class="blog-box">
+
+                <!-- img -->
+
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1642715614665-8e5534e7e427?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=557&q=80"
+                        alt="image">
+                </div>
+
+                <!-- text -->
+
+                <div class="table">
+                    <table class="contenthead">
+                        <span>Blog 1</span>
+                        <tbody>
+
+                            <tr>
+                                <td>{{ data[0][1] }}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="contentbody">
+                        <tbody>
+
+                            <tr>
+                                <td>{{ data[0][2] }}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <a href="/userpost1">Read More</a>
+                </div>
+            </div>
+
+            <!-- box 2 -->
+
+            <div class="blog-box">
+
+                <!-- img -->
+
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1623039405147-547794f92e9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=526&q=80"
+                        alt="image">
+                </div>
+
+                <!-- text -->
+
+                <div class="table">
+                    <table class="contenthead">
+                        <span>Blog 2</span>
+                        <tbody>
+
+                            <tr>
+                                <td>{{ data[1][1] }}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="contentbody">
+                        <tbody>
+
+                            <tr>
+                                <td>{{ data[1][2] }}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <a href="/userpost2">Read More</a>
+                </div>
+            </div>
+
+            <!-- box 3 -->
+
+            <div class="blog-box">
+
+                <!-- img -->
+
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1565464027194-7957a2295fb7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580"
+                        alt="image">
+                </div>
+
+                <!-- text -->
+
+                <div class="blog-text">
+                    <span>Create</span>
+                    <a href="/blog" class="blog-title">Write your story...</a>
+                    <p>Build Your Own Free Blog. No Technical Skills Needed.We provide premium blog writing
+                        services.Start Now! It's Easy.</p>
+                </div>
+            </div>
+
+            <!-- Another section 1 start -->
+
+            <section class="sectionright">
+                <div class="para">
+                    <p class="headtag"></i>Hi there,Ganesh Bisht here..</p>
+                    <p class="contenttag"><i class="fa-solid fa-quote-left"></i>Founder of Bloggify. This place is
+                        heaven for the people who loves to share
+                        their stories, experience. Bloggify is one stop place to write your stories, share your stories,
+                        learn from different stories, get experience, share experience. Find your true story telling art
+                        here.<i class="fa-solid fa-quote-right"></i></p>
+                </div>
+                <div class="thumbnail">
+                    <a href="/ganesh">
+                        <image src="{{ url_for('static', filename='img/dp.jpg') }}" alt="img">
+                    </a>
+                </div>
+            </section>
+
+            <!-- Another section 1 end -->
+
+        </div>
+    </section>
+
+    <!------------------------- Home Container End -------------------------------->
+
+</body>
+
+</html>

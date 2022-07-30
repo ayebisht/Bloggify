@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh</title>
+
+    <!--------- Awesome Fonts ------------>
+    <script src="https://kit.fontawesome.com/8f8794589b.js" crossorigin="anonymous"></script>
+
+    <!--------- Custom Style ------------->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!----------------------- Navigation Start ---------------------------->
+
+    <nav class="nav">
+        <div class="nav-menu flex">
+            <div class="nav-brand">
+                <a href="/home" class="text-grey">Bloggify</a>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="/home">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/category">Category</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/about">About</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/contactus">ContactUs</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-grey">
+                <a href="https://www.facebook.com/125blake"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/aye.mr.bisht/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/GaneshB09878823"><i class="fa-brands fa-twitter"></i></a>
+                <a href="/home"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-------x-------x-------- Navigation End ------x----------x----------->
+
+
+    <!----------------------- Ganesh Container Start --------------------->
+
+    <section class="ganesh">
+        <div class="ganeshthumbnail">
+            <a href="/ganesh">
+                <image src="{{ url_for('static', filename='img/dp.jpg') }}" alt="img" width="150px">
+            </a>
+        </div>
+    </section>
+    <section>
+        <div class="ganesh-heading">
+            <h3>My Blogs</h3>
+        </div>
+    </section>
+
+    <!-- table -->
+
+    <section>
+        <div class="allpost">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{i[0]}}</td>
+                        <td>{{i[1]}}</td>
+                        <td>{{i[2]}}</td>
+                        <td><a href="/edit/{{i[0]}}">Edit</a></td>
+                        <td><a href="/delete/{{i[0]}}">Delete</a></td>
+                    </tr>
+                </tbody>
+        </div>
+        {% endfor %}
+        </table>
+    </section>
+    <br>
+    <br>
+    
+    <!-- back button -->
+
+    <section class="blogh">
+        <div class="blogh-heading">
+            <a href="/home">Home</a>
+        </div>
+    </section>
+
+    <!------------------------- Ganesh Container End -------------------------------->
+
+</body>
+
+</html>
