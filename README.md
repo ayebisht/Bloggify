@@ -43,9 +43,13 @@ I'm aspiring to be a Data Scientist. My first ever model was to predict the pric
 
 ## 🛠 Skills
 I have very good command on vscode
+
 Best with python programming language
+
 Good with numpy, pandas
+
 For Data visualization matplotlib & seaborn
+
 For DataBase Sql
 
 ## 🔗 Links
